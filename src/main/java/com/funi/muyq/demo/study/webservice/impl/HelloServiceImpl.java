@@ -14,7 +14,6 @@ import javax.jws.WebService;
  * @UpdateRemark: []
  * @Version: [v1.0]
  */
-@WebService(endpointInterface = "com.funi.muyq.demo.study.webservice.HelloService", serviceName = "helloServiceImpl")
 public class HelloServiceImpl implements HelloService {
     public String sayHello(String name) {
         return "Hello, " + name;
