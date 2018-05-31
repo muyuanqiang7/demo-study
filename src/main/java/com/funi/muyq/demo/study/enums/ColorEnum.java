@@ -11,6 +11,8 @@ package com.funi.muyq.demo.study.enums;
  * @Version: [v1.0]
  */
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * 1.常量
  */
@@ -89,6 +91,7 @@ enum Color {
     }
 }
 
+@Slf4j
 enum ColorInterface implements Behaviour {
     RED(1, "红色"), GREEN(2, "绿色"), BLANK(3, "黑色"), YELLOW(4, "黄色");
 
@@ -101,7 +104,7 @@ enum ColorInterface implements Behaviour {
     }
 
     public void print() {
-        System.out.println(String.valueOf(this.status) + "-" + this.name);
+        log.info("{}", String.valueOf(this.status) + "-" + this.name);
     }
 
     public String getInfo() {
@@ -156,18 +159,20 @@ class TrafficLight {
  * 查看JDK或者Thinking in java
  * tips:
  * 枚举的比较是可以使用==
- * 因为在Enum类里面，已经重写了equals方法，而方法里面比较就是直接使用==
+ * static final类型 地址均一样可以使用==
  */
+@Slf4j
 class EnumTest {
     public static void main(String[] args) {
         Signal color = Signal.GREEN;
         //通过名称获取枚举实例
-        System.out.println(Signal.valueOf("GREEN"));
-        System.out.println(color.ordinal());
-        System.out.println(color.getCode());
-        System.out.println(color.name());
-        System.out.println(TrafficLight.change(color).getCode());
-        System.out.println(Color.BLANK.toString());
+        log.info("enum toString: {}", Signal.valueOf("GREEN"));
+        log.info("enum ordinal {}", color.ordinal());
+        log.info("enum code: {}", color.getCode());
+        log.info("enum name: {}", color.name());
+        log.info("enum switch: {}", TrafficLight.change(color).getCode());
+        log.info("enum toString: {}", Color.BLANK.toString());
+
         ColorInterface.BLANK.print();
         for (Food.DessertEnum dessertEnum : Food.DessertEnum.values()) {
             System.out.print(dessertEnum + "  ");
