@@ -7,3 +7,7 @@
     * 接口隔离原则(Interface Segregation Principle,ISP)
     * 合成复用原则(Composite Reuse Principle,CRP)
     * 迪米特法则(Law of Demeter,LoD)
+* 创建型模式
+    * 简单工厂模式
+    * 工厂方法模式
+    * 抽象工厂模式
