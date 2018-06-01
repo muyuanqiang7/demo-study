@@ -5,5 +5,5 @@
     * 里氏替换原则(Liskov Substitution Principle,LSP)
     * 依赖倒转原则(Dependency Inversion Principle,DIP)
     * 接口隔离原则(Interface Segregation Principle,ISP)
-    * 合成复用原则(Composite Resue Principle,CRP)
+    * 合成复用原则(Composite Reuse Principle,CRP)
     * 迪米特法则(Law of Demeter,LoD)
