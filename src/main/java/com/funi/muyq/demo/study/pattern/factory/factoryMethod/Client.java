@@ -1,6 +1,6 @@
 package com.funi.muyq.demo.study.pattern.factory.factoryMethod;
 
-import com.funi.muyq.demo.study.pattern.factory.PropertisUtil;
+import com.funi.muyq.demo.study.pattern.factory.PropertiesUtil;
 
 /**
  * @Author: [muyuanqiang]
@@ -8,7 +8,9 @@ import com.funi.muyq.demo.study.pattern.factory.PropertisUtil;
  */
 public class Client {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
-        String className = PropertisUtil.getValue("className");
+        String className = PropertiesUtil.getString("className");
+        String version = PropertiesUtil.getString("version");
+        System.out.println(version);
         Class targetClass = Class.forName(className);
         LoggerFactory loggerFactory = (LoggerFactory) targetClass.newInstance();
         loggerFactory.createLogger().writeLog(loggerFactory.getClass().getSimpleName());
