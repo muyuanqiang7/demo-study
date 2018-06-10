@@ -6,7 +6,7 @@ import com.funi.muyq.demo.study.pattern.factory.PropertiesUtil;
  * @Author: [muyuanqiang]
  * @CreateDate: [2018/6/1 20:21]
  */
-public class Client {
+public class FactoryMethodClient {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         String className = PropertiesUtil.getString("className");
         String version = PropertiesUtil.getString("version");

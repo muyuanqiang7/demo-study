@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- more bean definitions go here -->
+    <bean id="home" class="com.funi.muyq.demo.study.springsource.beanlifecircle.Home"/>
+    <bean id="initPerson" class="com.funi.muyq.demo.study.springsource.beanlifecircle.InitPerson"/>
+    <bean id="asianPerson" class="com.funi.muyq.demo.study.springsource.beanlifecircle.Person"/>
+</beans>
