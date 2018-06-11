@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:uitil="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <uitil:list id="opus">
+        <value>生如夏花</value>
+        <value>平凡之路</value>
+    </uitil:list>
+    <!-- more bean definitions go here -->
+    <!--constructor-arg和c命名空间-->
+    <!--当使用list集合是需要使用 constructor-arg-->
+    <bean id="sgtDisc" class="com.funi.muyq.demo.study.springsource.beanwiring.SgtDisc" c:_0="平凡之路" c:_1="后会无期"
+          p:composer-ref="composer">
+        <!--<property name="composer" ref="composer"/>-->
+        <!--property和p命名空间-->
+    </bean>
+    <bean id="cdPlayer" class="com.funi.muyq.demo.study.springsource.beanwiring.CDPlayer">
+        <constructor-arg name="disc" ref="sgtDisc"/>
+    </bean>
+    <bean id="composer" class="com.funi.muyq.demo.study.springsource.beanwiring.Composer" c:name="朴树"
+          c:description="中国大陆歌手,音乐人" c:opus-ref="opus" p:name="朴树"/>
+</beans>

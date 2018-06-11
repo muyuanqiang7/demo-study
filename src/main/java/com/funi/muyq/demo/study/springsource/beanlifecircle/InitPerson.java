@@ -19,6 +19,8 @@ public class InitPerson implements BeanPostProcessor {
         log.info("postProcessBeforeInitialization bean name: {}", s);
         if (o instanceof Person) {
             Person person = (Person) o;
+            log.info("person default address: {}", person.getAddress());
+            log.info("person default name: {}", person.getName());
             person.setName("BeanNameAware");
             person.setAddress("BeanNameAware");
         }

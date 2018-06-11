@@ -1,6 +1,7 @@
 package com.funi.muyq.demo.study.springsource.beanlifecircle;
 
 import lombok.Data;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
@@ -24,11 +25,18 @@ import org.springframework.context.ApplicationContextAware;
  */
 @Slf4j
 @Data
+@ToString
 public class Person implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
     @Autowired
     private Home home;
     private String name;
     private String address;
+
+
+    public Person(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
 
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         log.info(beanFactory.toString());
@@ -44,6 +52,9 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
         log.info(applicationContext.getId());
     }
 
+    public void printName() {
+        System.out.println(this.name);
+    }
 
     public void afterPropertiesSet() throws Exception {
 

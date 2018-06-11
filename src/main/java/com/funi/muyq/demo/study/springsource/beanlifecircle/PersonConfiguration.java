@@ -21,6 +21,6 @@ public class PersonConfiguration {
 
     @Bean
     public Person asianPerson() {
-        return new Person();
+        return new Person("","");
     }
 }

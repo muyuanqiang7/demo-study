@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!-- more bean definitions go here -->
     <bean id="home" class="com.funi.muyq.demo.study.springsource.beanlifecircle.Home"/>
     <bean id="initPerson" class="com.funi.muyq.demo.study.springsource.beanlifecircle.InitPerson"/>
-    <bean id="asianPerson" class="com.funi.muyq.demo.study.springsource.beanlifecircle.Person"/>
+    <!--constructor-arg和c命名空间-->
+    <!--<bean id="asianPerson" class="com.funi.muyq.demo.study.springsource.beanlifecircle.Person">-->
+    <!--<constructor-arg name="address" value="address"/>-->
+    <!--<constructor-arg name="name" value="name"/>-->
+    <!--<bean id="asianPerson" class="com.funi.muyq.demo.study.springsource.beanlifecircle.Person">-->
+    <!--<constructor-arg name="address" value="address"/>-->
+    <!--<constructor-arg name="name" value="name"/>-->
+    <!--</bean>-->
+    <!--<bean id="asianPerson" class="com.funi.muyq.demo.study.springsource.beanlifecircle.Person"-->
+    <!--c:address="address from c namespace"-->
+    <!--c:name="name from c namespace"/>-->
+    <bean id="asianPerson" class="com.funi.muyq.demo.study.springsource.beanlifecircle.Person"
+          c:_0="address from c namespace"
+          c:_1="name from c namespace"/>
 </beans>
