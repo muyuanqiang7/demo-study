@@ -24,6 +24,10 @@ public class AopTest extends TestCommon {
     @Test
     public void test() {
         performanceService.perform();
-        // Assert.assertEquals("Performance start...please make your phone silence\nperform start......\n", systemOutRule.getLog());
+        Assert.assertEquals("perform\n" +
+                "perform\n" +
+                "Performance start...please make your phone silence\n" +
+                "perform start......\n" +
+                "Performance end\n", systemOutRule.getLog());
     }
 }
