@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- more bean definitions go here -->
+    <beans profile="sad">
+        <bean id="sadSong" class="com.funi.muyq.demo.study.springsource.profile.SadSong" c:_0="我终于失去了你" c:_1="李宗盛"
+              c:_2="sad"/>
+    </beans>
+    <beans profile="happy">
+        <bean id="happySong" class="com.funi.muyq.demo.study.springsource.profile.HappySong" c:_0="春天在哪里" c:_1="佚名"
+              c:_2="happy"/>
+    </beans>
+</beans>
